@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Abstrakcyjna ilustracja eleganckiego lobby hotelowego o zmierzchu">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0f1a"/>
+      <stop offset="55%" stop-color="#151a2b"/>
+      <stop offset="100%" stop-color="#1f2439"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12141c"/>
+      <stop offset="100%" stop-color="#05060a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a9812f"/>
+      <stop offset="50%" stop-color="#e6c874"/>
+      <stop offset="100%" stop-color="#a9812f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f3d98b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f3d98b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pillar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0e1119"/>
+      <stop offset="50%" stop-color="#232840"/>
+      <stop offset="100%" stop-color="#0e1119"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <rect y="640" width="1600" height="360" fill="url(#floor)"/>
+  <circle cx="800" cy="330" r="420" fill="url(#glow)"/>
+
+  <g opacity="0.9">
+    <rect x="90" y="120" width="46" height="560" fill="url(#pillar)"/>
+    <rect x="1464" y="120" width="46" height="560" fill="url(#pillar)"/>
+    <rect x="360" y="90" width="30" height="590" fill="url(#pillar)"/>
+    <rect x="1210" y="90" width="30" height="590" fill="url(#pillar)"/>
+  </g>
+
+  <g stroke="url(#gold)" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M200 700 Q800 560 1400 700"/>
+    <path d="M240 760 Q800 630 1360 760"/>
+  </g>
+
+  <g fill="url(#gold)" opacity="0.85">
+    <circle cx="800" cy="240" r="5"/>
+    <circle cx="700" cy="270" r="3"/>
+    <circle cx="900" cy="270" r="3"/>
+    <circle cx="620" cy="320" r="2.4"/>
+    <circle cx="980" cy="320" r="2.4"/>
+    <line x1="800" y1="245" x2="800" y2="330" stroke="url(#gold)" stroke-width="1.4"/>
+    <line x1="700" y1="272" x2="770" y2="335" stroke="url(#gold)" stroke-width="1.2"/>
+    <line x1="900" y1="272" x2="830" y2="335" stroke="url(#gold)" stroke-width="1.2"/>
+  </g>
+
+  <g opacity="0.6">
+    <rect x="150" y="700" width="120" height="220" rx="4" fill="#161a26"/>
+    <rect x="1330" y="700" width="120" height="220" rx="4" fill="#161a26"/>
+  </g>
+
+  <rect x="0" y="960" width="1600" height="40" fill="#05060a"/>
+</svg>

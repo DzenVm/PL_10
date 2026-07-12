@@ -1,0 +1,215 @@
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 12, 0.35) 0%,
+    rgba(10, 10, 12, 0.55) 55%,
+    rgba(10, 10, 12, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 96px;
+  max-width: 760px;
+}
+
+.heroLead {
+  font-size: 1.15rem;
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.statRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.stat {
+  border-left: 1px solid var(--border-strong);
+  padding-left: 16px;
+}
+
+.statNumber {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--gold-light);
+  display: block;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sectionHead {
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+
+.sectionHead--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.mediaSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.mediaImage {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.amenityList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.amenityMark {
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+}
+
+.casinoTeaser {
+  position: relative;
+  border: 1px solid var(--border-strong);
+  padding: 72px 48px;
+  text-align: center;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(201, 162, 39, 0.08),
+    transparent 60%
+  );
+}
+
+.casinoTeaser h2 {
+  margin-bottom: 20px;
+}
+
+.casinoTeaser p {
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+
+.quote {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quoteText {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.quoteAuthor {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.locationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.locationList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 28px 0 36px;
+  color: var(--text-muted);
+}
+
+.mapFrame {
+  border: 1px solid var(--border-strong);
+  padding: 40px;
+  text-align: center;
+  background: var(--bg-panel);
+}
+
+.mapFrame p {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 860px) {
+  .introGrid,
+  .mediaSplit,
+  .locationGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .statRow,
+  .amenityList {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent {
+    padding-bottom: 56px;
+  }
+}
