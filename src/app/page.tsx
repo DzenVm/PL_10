@@ -24,6 +24,7 @@ const jsonLd = {
   name: "Butikowy hotel pięciogwiazdkowy w centrum Warszawy",
   description:
     "Butikowy hotel pięciogwiazdkowy w centrum Warszawy z prywatnym salonem gier, spa i restauracją.",
+  url: "https://mygolkahotel.site",
   address: {
     "@type": "PostalAddress",
     streetAddress: "ul. Mysia 3",

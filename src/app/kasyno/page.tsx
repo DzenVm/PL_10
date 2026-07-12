@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Salon gier w hotelu",
   description:
     "Prywatny salon gier dla gości hotelowych w centrum Warszawy: ruletka, blackjack, poker oraz automaty do gry. Wstęp wyłącznie dla osób pełnoletnich.",
+  alternates: {
+    canonical: "/kasyno",
+  },
 };
 
 const TABLES = [

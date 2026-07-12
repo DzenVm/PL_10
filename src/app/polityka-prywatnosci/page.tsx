@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Polityka prywatności i plików cookie",
   description:
     "Polityka prywatności i plików cookie strony hotelowej: jakie dane i pliki cookie wykorzystujemy, a jakich nie stosujemy.",
+  alternates: {
+    canonical: "/polityka-prywatnosci",
+  },
 };
 
 export default function PrivacyPage() {
