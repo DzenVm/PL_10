@@ -62,7 +62,9 @@ export default function CasinoPage() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className="eyebrow">Salon gier</span>
-          <h1>Kameralny salon gier w sercu hotelu</h1>
+          <h1>
+            Legalne polskie kasyno w kameralnym salonie gier naszego hotelu
+          </h1>
           <p>
             Oddzielne, dyskretne skrzydło na parterze hotelu mieści niewielki
             salon gier — miejsce spotkań przy stołach do ruletki, blackjacka

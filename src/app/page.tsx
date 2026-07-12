@@ -73,7 +73,10 @@ export default function Home() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className="eyebrow">Warszawa · Hotel butikowy 5*</span>
-          <h1>Cisza, dyskrecja i wyjątkowa gościnność w sercu miasta</h1>
+          <h1>
+            Ekskluzywny hotel kasyno w sercu Warszawy — cisza, dyskrecja i
+            wyjątkowa gościnność
+          </h1>
           <p className={styles.heroLead}>
             Kameralny hotel z autorską restauracją, spa i prywatnym salonem
             gier — miejsce stworzone dla gości, którzy cenią spokój równie
