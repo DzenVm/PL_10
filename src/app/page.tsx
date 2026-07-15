@@ -41,7 +41,7 @@ const jsonLd = {
     "@type": "Rating",
     ratingValue: "5",
   },
-  telephone: "+48221234567",
+  telephone: "+48225832240",
   priceRange: "€€€€",
   amenityFeature: AMENITIES.map((name) => ({
     "@type": "LocationFeatureSpecification",

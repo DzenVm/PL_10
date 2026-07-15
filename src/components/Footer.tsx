@@ -33,8 +33,8 @@ export default function Footer() {
         <div>
           <h4 className={styles.heading}>Kontakt</h4>
           <p className={styles.small}>
-            <a className={styles.link} href="tel:+48221234567">
-              +48 22 123 45 67
+            <a className={styles.link} href="tel:+48225832240">
+              +48 22 583 22 40
             </a>
           </p>
           <p className={styles.small}>
