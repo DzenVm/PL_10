@@ -6,25 +6,31 @@ import CookieConsent from "@/components/CookieConsent";
 
 const siteUrl = "https://mygolkahotel.site";
 
+const defaultTitle = "Hotel z kasynem 5* w Warszawie | Legalne polskie kasyno";
+const defaultDescription =
+  "Butikowy hotel kasyno w centrum Warszawy: 37 apartamentów, spa, restauracja i legalne polskie kasyno na miejscu, dostępne wyłącznie stacjonarnie dla gości 18+.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Butikowy hotel 5* z salonem gier w Warszawie",
-    template: "%s | Hotel butikowy w Warszawie",
+    default: defaultTitle,
+    template: "%s | Hotel z kasynem w Warszawie",
   },
-  description:
-    "Butikowy hotel pięciogwiazdkowy w centrum Warszawy z prywatnym salonem gier, spa i restauracją. Odkryj ekskluzywny wypoczynek w sercu miasta.",
+  description: defaultDescription,
   alternates: {
     canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   openGraph: {
     type: "website",
     locale: "pl_PL",
     url: siteUrl,
-    siteName: "Butikowy hotel 5* z salonem gier w Warszawie",
-    title: "Butikowy hotel 5* z salonem gier w Warszawie",
-    description:
-      "Butikowy hotel pięciogwiazdkowy w centrum Warszawy z prywatnym salonem gier, spa i restauracją.",
+    siteName: defaultTitle,
+    title: defaultTitle,
+    description: defaultDescription,
   },
 };
 

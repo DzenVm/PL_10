@@ -4,13 +4,54 @@ import type { Metadata } from "next";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Salon gier w hotelu",
+  title: "Legalne polskie kasyno w hotelu",
   description:
-    "Prywatny salon gier dla gości hotelowych w centrum Warszawy: ruletka, blackjack, poker oraz automaty do gry. Wstęp wyłącznie dla osób pełnoletnich.",
+    "Legalne polskie kasyno w kameralnym salonie gier hotelowym w Warszawie: ruletka, blackjack, poker oraz automaty. Gra wyłącznie stacjonarnie, dla gości 18+.",
   alternates: {
     canonical: "/kasyno",
   },
 };
+
+const FAQ = [
+  {
+    question: "Czy salon gier działa online, czy tylko stacjonarnie?",
+    answer:
+      "Salon gier działa wyłącznie stacjonarnie, na terenie hotelu. Ta strona internetowa nie oferuje gier hazardowych online, zakładów ani depozytów — wszystkie gry odbywają się osobiście, przy stołach obsługiwanych przez krupierów.",
+  },
+  {
+    question: "Czy salon gier jest legalny?",
+    answer:
+      "Tak. Salon gier prowadzony jest przez licencjonowanego operatora, zgodnie z ustawą o grach hazardowych obowiązującą w Polsce, pod nadzorem właściwych organów państwowych.",
+  },
+  {
+    question: "Kto może wejść do salonu gier?",
+    answer:
+      "Wstęp mają wyłącznie osoby pełnoletnie (18+) po okazaniu dokumentu tożsamości — goście hotelowi oraz osoby zaproszone, zgodnie z regulaminem obiektu.",
+  },
+  {
+    question: "Jakie gry są dostępne?",
+    answer:
+      "W salonie dostępne są stoły do ruletki europejskiej, blackjacka, pokera w formacie cash game oraz wydzielona strefa automatów do gry.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const faqJsonLdScript = JSON.stringify(faqJsonLd)
+  .replace(/</g, "\\u003c")
+  .replace(/>/g, "\\u003e")
+  .replace(/&/g, "\\u0026");
 
 const TABLES = [
   {
@@ -43,11 +84,18 @@ const RULES = [
 export default function CasinoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: faqJsonLdScript }}
+      />
+
       <div className={styles.ageRibbon}>
         <div className={`container ${styles.ageRibbonInner}`}>
           <span>18+</span>
           <span aria-hidden="true">·</span>
           <span>Wstęp wyłącznie dla osób pełnoletnich</span>
+          <span aria-hidden="true">·</span>
+          <span>Wyłącznie stacjonarnie, bez gry online</span>
           <span aria-hidden="true">·</span>
           <span>Gra może uzależniać</span>
         </div>
@@ -60,6 +108,7 @@ export default function CasinoPage() {
           aria-hidden="true"
           fill
           priority
+          sizes="100vw"
           className={styles.heroImage}
         />
         <div className={styles.heroOverlay} />
@@ -173,6 +222,24 @@ export default function CasinoPage() {
             <Link href="/#kontakt" className="btn" style={{ marginTop: "20px" }}>
               Skontaktuj się z concierge
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--alt" aria-labelledby="faq">
+        <div className="container">
+          <div style={{ maxWidth: "640px", marginBottom: "48px" }}>
+            <span className="eyebrow">Najczęstsze pytania</span>
+            <h2 id="faq">Warto wiedzieć przed wizytą</h2>
+            <div className="divider" />
+          </div>
+          <div className={styles.faqGrid}>
+            {FAQ.map((item) => (
+              <div key={item.question} className="card">
+                <h3>{item.question}</h3>
+                <p style={{ marginTop: "10px" }}>{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

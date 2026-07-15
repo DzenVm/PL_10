@@ -26,9 +26,14 @@ export default function Header() {
           </ul>
         </nav>
 
-        <Link href="/#kontakt" className={`btn ${styles.cta}`}>
-          Rezerwacja
-        </Link>
+        <div className={styles.ctaGroup}>
+          <a href="tel:+48221234567" className={styles.phone}>
+            +48 22 123 45 67
+          </a>
+          <Link href="/#kontakt" className={`btn ${styles.cta}`}>
+            Rezerwacja
+          </Link>
+        </div>
       </div>
     </header>
   );

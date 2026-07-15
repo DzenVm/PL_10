@@ -70,6 +70,12 @@
   gap: 40px;
 }
 
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
 .rulesList {
   list-style: none;
   display: flex;
@@ -126,7 +132,8 @@
 
 @media (max-width: 860px) {
   .introGrid,
-  .infoGrid {
+  .infoGrid,
+  .faqGrid {
     grid-template-columns: 1fr;
     gap: 32px;
   }

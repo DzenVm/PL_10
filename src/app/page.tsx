@@ -69,6 +69,7 @@ export default function Home() {
           aria-hidden="true"
           fill
           priority
+          sizes="100vw"
           className={styles.heroImage}
         />
         <div className={styles.heroOverlay} />
@@ -198,8 +199,12 @@ export default function Home() {
       <section className="section section--alt">
         <div className="container">
           <div className={styles.casinoTeaser}>
-            <span className="badge">18+ · Wyłącznie dla gości hotelowych</span>
-            <h2 style={{ marginTop: "24px" }}>Prywatny salon gier</h2>
+            <span className="badge">
+              18+ · Wyłącznie stacjonarnie, bez gry online
+            </span>
+            <h2 style={{ marginTop: "24px" }}>
+              Legalne polskie kasyno w prywatnym salonie gier
+            </h2>
             <p>
               Na parterze hotelu, w oddzielnym, dyskretnym skrzydle, znajduje
               się kameralny salon gier — miejsce spotkań przy stołach do gry

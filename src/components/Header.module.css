@@ -52,6 +52,24 @@
   color: var(--gold-light);
 }
 
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.phone {
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.phone:hover {
+  color: var(--gold-light);
+}
+
 .cta {
   padding: 10px 22px;
   font-size: 0.72rem;
@@ -61,5 +79,19 @@
 @media (max-width: 860px) {
   .nav {
     display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .ctaGroup {
+    gap: 12px;
+  }
+
+  .phone {
+    font-size: 0.72rem;
+  }
+
+  .cta {
+    padding: 8px 14px;
   }
 }
